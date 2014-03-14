@@ -5,7 +5,7 @@ funding.Views = funding.Views || {};
 (function () {
     'use strict';
 
-    funding.Views.NeedsviewView = Backbone.View.extend({
+    funding.Views.NeedsView = Backbone.View.extend({
 
         template: JST['app/scripts/templates/NeedsView.ejs']
 

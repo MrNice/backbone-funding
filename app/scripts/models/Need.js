@@ -6,9 +6,6 @@ funding.Models = funding.Models || {};
   'use strict';
 
   funding.Models.NeedModel = Backbone.Model.extend({
-
-    url: '',
-
     initialize: function() {
     },
 
@@ -16,13 +13,5 @@ funding.Models = funding.Models || {};
       amountNeeded: 100,
       amountRecieved: 0,
     },
-
-    validate: function(attrs, options) {
-    },
-
-    parse: function(response, options)  {
-      return response;
-    }
   });
-
 })();

@@ -2,21 +2,13 @@
 
 
 window.funding = {
-  Models: {
-
-  },
-  Collections: {
-
-  },
-  Views: {
-
-  },
-  Routers: {
-
-  },
+  Models: {},
+  Collections: {},
+  Views: {},
+  Routers: {},
   init: function () {
     'use strict';
-    console.log('Hello from Backbone!');
+    console.log('Ohgod is this breaking?!');
   }
 };
 
