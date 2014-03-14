@@ -1,0 +1,26 @@
+/*global funding, $*/
+
+
+window.funding = {
+  Models: {
+
+  },
+  Collections: {
+
+  },
+  Views: {
+
+  },
+  Routers: {
+
+  },
+  init: function () {
+    'use strict';
+    console.log('Hello from Backbone!');
+  }
+};
+
+$(document).ready(function () {
+  'use strict';
+  funding.init();
+});
