@@ -11,10 +11,11 @@ window.funding = {
 
     var needs = new funding.Collections.NeedsCollection();
     var users = new funding.Collections.UsersCollection(userData);
+    // TODO: Set these to local variables
     window.app = new funding.Models.AppModel({users: users, needs: needs});
-    var appView = new funding.Views.AppView({model: app});
-
-    console.log('Ohgod is this breaking?!');
+    window.appView = new funding.Views.AppView({model: app});
+    // console.log('Ohgod is this breaking?!');
+    $('.header').append(appView.render());
   }
 };
 
