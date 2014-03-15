@@ -20,9 +20,10 @@ funding.Views = funding.Views || {};
       this.$el.html(this.template());
       console.log(this.$el);
       return this.$el.children(":first").append(
-        this.collection.map(function(need){
+        // Shuffle the collection so that things look different every time
+        this.collection.chain().shuffle().map(function(need){
           return new funding.Views.NeedEntryView({model: need}).render();
-        }));
+        }).value());
     },
   });
 

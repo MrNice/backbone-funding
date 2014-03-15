@@ -21,9 +21,9 @@ funding.Views = funding.Views || {};
       this.$el.html(this.template());
       console.log(this.$el);
       this.$el.children(":first").append(
-        this.collection.map(function(user){
+        this.collection.chain().shuffle().map(function(user){
           return new funding.Views.UserEntryView({model: user}).render();
-        })
+        }).value()
       );
     },
   });

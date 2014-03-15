@@ -6,7 +6,6 @@ funding.Views = funding.Views || {};
   'use strict';
 
   funding.Views.UserEntryView = Backbone.View.extend({
-    tagName: 'div',
 
     className: "item user col-sm-10 col-sm-offset-1",
 
