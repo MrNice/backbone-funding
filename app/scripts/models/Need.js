@@ -12,7 +12,7 @@ funding.Models = funding.Models || {};
 
     defaults: {
       amountNeeded: 100,
-      amountRecieved: 0,
+      amountReceived: 0,
     },
   });
 })();
