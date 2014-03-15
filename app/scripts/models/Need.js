@@ -7,7 +7,7 @@ funding.Models = funding.Models || {};
 
   funding.Models.NeedModel = Backbone.Model.extend({
     initialize: function() {
-      this.loaners = new funding.Models.LoanersCollection();
+      this.set('loaners', new funding.Collections.LoanersCollection());
     },
 
     defaults: {

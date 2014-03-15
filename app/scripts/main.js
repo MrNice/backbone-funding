@@ -8,8 +8,8 @@ window.funding = {
   Routers: {},
   init: function () {
     'use strict';
-
-    var users = new UsersCollection(userData);
+    console.log(funding.Collections.UsersCollection);
+    var users = new funding.Collections.UsersCollection(userData);
     var app = new AppModel({collection: users});
     var appView = new AppView({model: app});
 
