@@ -21,6 +21,14 @@ funding.Models = funding.Models || {};
           user.spawnNeed();
         }
       });
+
+      // Get donation list from users and set need.amountReceived
+      var funds = this.get('users').pluck('funded');
+      _(funds).each(function(fund) {
+        _(fund).each(function(donation) {
+
+        });
+      });
     },
 
     defaults: {

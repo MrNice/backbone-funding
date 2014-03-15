@@ -14,5 +14,10 @@ funding.Models = funding.Models || {};
       amountNeeded: 100,
       amountReceived: 0,
     },
+
+    receiveDonation: function(amount, donor) {
+      this.get('loaners').add(donor); 
+      this.set('amountReceived', this.get('amountReceived') + amount);
+    },
   });
 })();

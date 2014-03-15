@@ -19,7 +19,7 @@ funding.Views = funding.Views || {};
     render: function() {
       this.$el.html(this.template());
       console.log(this.$el);
-      this.$el.children(":first").append(
+      return this.$el.children(":first").append(
         this.collection.map(function(need){
           return new funding.Views.NeedEntryView({model: need}).render();
         }));
