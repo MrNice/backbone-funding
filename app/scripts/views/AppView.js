@@ -18,16 +18,18 @@ funding.Views = funding.Views || {};
         collection: this.model.get('needs'),
       });
 
-      this.render();
     },
 
     render: function(){
       console.log('rendering');
-      return this.$el.html(this.template());
-      // return this.$el.html([
-      //   this.usersView.$el,
-      //   this.needsView.$el,
-      //   ]);
+      
+      var rendered = this.template();
+
+      return this.$el.html([
+        rendered,
+        this.usersView.$el,
+        this.needsView.$el,
+      ]);
     },
   });
 })();

@@ -3,12 +3,20 @@
 funding.Views = funding.Views || {};
 
 (function () {
-    'use strict';
+  'use strict';
 
-    funding.Views.NeedEntryView = Backbone.View.extend({
+  funding.Views.NeedEntryView = Backbone.View.extend({
 
-        template: JST['app/scripts/templates/NeedEntryView.ejs']
+    template: JST['app/scripts/templates/NeedEntryView.ejs'],
 
-    });
+    initialize: function(){
+      this.render();
+    },
+    
+    render: function(){
+      return this.$el.html(this.template(this.model));
+    },
+
+  });
 
 })();
