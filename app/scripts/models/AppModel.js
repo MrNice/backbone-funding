@@ -10,7 +10,12 @@ funding.Models = funding.Models || {};
     url: '',
 
     initialize: function() {
-
+      // Add all of the needs stored under users 
+      _(this.get('users').models).each(function(user) {
+        if(user.get('need') !== undefined) {
+          user.spawnNeed();
+        }
+      });
     },
 
     defaults: {
