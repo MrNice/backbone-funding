@@ -19,6 +19,7 @@ funding.Views = funding.Views || {};
       this.needsView = new funding.Views.NeedsView({
         collection: this.model.get('needs'),
       });
+      this.render();
 
     },
 
