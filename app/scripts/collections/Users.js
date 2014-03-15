@@ -3,12 +3,15 @@
 funding.Collections = funding.Collections || {};
 
 (function () {
-    'use strict';
+  'use strict';
 
-    funding.Collections.UsersCollection = Backbone.Collection.extend({
+  funding.Collections.UsersCollection = Backbone.Collection.extend({
 
-        model: funding.Models.UsersModel
+    model: funding.Models.UserModel,
 
-    });
+    events: {
+      'newNeed': function(need) { console.log(need); },
+    },
+  });
 
 })();

@@ -7,7 +7,7 @@ funding.Collections = funding.Collections || {};
 
     funding.Collections.NeedsCollection = Backbone.Collection.extend({
 
-        model: funding.Models.NeedsModel
+        model: funding.Models.NeedModel
 
     });
 

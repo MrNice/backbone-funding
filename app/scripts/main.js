@@ -8,9 +8,10 @@ window.funding = {
   Routers: {},
   init: function () {
     'use strict';
-    
-    var users = new funding.Collections.UsersCollection();
-    var app = new funding.Models.AppModel({collection: users});
+
+    var needs = new funding.Collections.NeedsCollection();
+    var users = new funding.Collections.UsersCollection(userData);
+    window.app = new funding.Models.AppModel({users: users, needs: needs});
     var appView = new funding.Views.AppView({model: app});
 
     console.log('Ohgod is this breaking?!');

@@ -3,24 +3,25 @@
 funding.Models = funding.Models || {};
 
 (function () {
-    'use strict';
+  'use strict';
 
-    funding.Models.AppModel = Backbone.Model.extend({
+  funding.Models.AppModel = Backbone.Model.extend({
 
-        url: '',
+    url: '',
 
-        initialize: function() {
-        },
+    initialize: function() {
 
-        defaults: {
-        },
+    },
 
-        validate: function(attrs, options) {
-        },
+    defaults: {
+    },
 
-        parse: function(response, options)  {
-            return response;
-        }
-    });
+    validate: function(attrs, options) {
+    },
+
+    parse: function(response, options)  {
+      return response;
+    }
+  });
 
 })();
