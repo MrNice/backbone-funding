@@ -3,19 +3,27 @@
 funding.Views = funding.Views || {};
 
 (function () {
-    'use strict';
+  'use strict';
 
-    funding.Views.NeedsView = Backbone.View.extend({
+  funding.Views.NeedsView = Backbone.View.extend({
+    tagName: 'div',
 
-        template: JST['app/scripts/templates/NeedsView.ejs'],
+    className: 'needs col-sm-6 col-xs-12',
 
-        initialize: function(){
-          this.render();
-        },
+    template: JST['app/scripts/templates/NeedsView.ejs'],
 
-        render: function() {
+    initialize: function(){
+      this.render();
+    },
 
-        },
-    });
+    render: function() {
+      this.$el.html(this.template());
+      console.log(this.$el);
+      this.$el.children(":first").append(
+        this.collection.map(function(need){
+          return new funding.Views.NeedEntryView({model: need}).render();
+        }));
+    },
+  });
 
 })();

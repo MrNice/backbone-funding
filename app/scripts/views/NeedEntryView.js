@@ -13,8 +13,8 @@ funding.Views = funding.Views || {};
       this.render();
     },
     
-    render: function(){
-      return this.$el.html(this.template(this.model));
+    render: function() {
+      return this.$el.html(this.template(this.model.attributes));
     },
 
   });

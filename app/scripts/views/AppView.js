@@ -7,10 +7,12 @@ funding.Views = funding.Views || {};
 
   funding.Views.AppView = Backbone.View.extend({
 
+    className: 'row',
+    
     template: JST['app/scripts/templates/AppView.ejs'],
 
     initialize: function(){
-      this.usersView = new funding.Views.UserView({
+      this.usersView = new funding.Views.UsersView({
         collection: this.model.get('users'),
       });
       
@@ -22,7 +24,7 @@ funding.Views = funding.Views || {};
 
     render: function(){
       console.log('rendering');
-      
+
       var rendered = this.template();
 
       return this.$el.html([

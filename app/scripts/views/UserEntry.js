@@ -3,20 +3,23 @@
 funding.Views = funding.Views || {};
 
 (function () {
-    'use strict';
+  'use strict';
 
-    funding.Views.UserEntryView = Backbone.View.extend({
+  funding.Views.UserEntryView = Backbone.View.extend({
+    tagName: 'div',
 
-        template: JST['app/scripts/templates/UserEntry.ejs'],
+    className: 'user',
 
-        initialize: function(){
-          this.render();
-        },
+    template: JST['app/scripts/templates/UserEntry.ejs'],
 
-        render: function() {
-          return this.$el.html(this.template(this.model.attributes));
-        },
+    initialize: function(){
+      this.render();
+    },
 
-    });
+    render: function() {
+      return this.$el.html(this.template(this.model.attributes));
+    },
+
+  });
 
 })();

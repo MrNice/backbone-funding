@@ -5,7 +5,11 @@ funding.Views = funding.Views || {};
 (function () {
   'use strict';
 
-  funding.Views.UserView = Backbone.View.extend({
+  funding.Views.UsersView = Backbone.View.extend({
+
+    tagName: 'div',
+
+    className: 'users col-sm-6 col-xs-12',
 
     template: JST['app/scripts/templates/UserView.ejs'],
 
@@ -14,11 +18,13 @@ funding.Views = funding.Views || {};
     },
 
     render: function(){
-      console.log(this.collection);
-      var children = this.collection.map(function(user) {
-        return new funding.Views.UserEntryView({model: user});
-      });
-      return this.$el.html(this.template().concat(children));
+      this.$el.html(this.template());
+      console.log(this.$el);
+      this.$el.children(":first").append(
+        this.collection.map(function(user){
+          return new funding.Views.UserEntryView({model: user}).render();
+        })
+      );
     },
   });
 

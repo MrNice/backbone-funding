@@ -18,7 +18,10 @@ funding.Models = funding.Models || {};
       if(this.get('need')['added'] === false){
         this.get('need')['added'] = true;
         // console.log(this.get('need'));
-        this.trigger('newNeed', new funding.Models.NeedModel(this.get('need')));
+        var newNeed = new funding.Models.NeedModel(this.get('need'));
+        newNeed.set('image', this.get('image'));
+        newNeed.set('owner', this);
+        this.trigger('newNeed', newNeed);
       }
     },
 

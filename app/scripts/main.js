@@ -15,7 +15,7 @@ window.funding = {
     window.app = new funding.Models.AppModel({users: users, needs: needs});
     window.appView = new funding.Views.AppView({model: app});
     // console.log('Ohgod is this breaking?!');
-    $('.header').append(appView.render());
+    $('.header').after(appView.render());
   }
 };
 
