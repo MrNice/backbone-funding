@@ -12,7 +12,7 @@ funding.Views = funding.Views || {};
     template: JST['app/scripts/templates/AppView.ejs'],
 
     initialize: function(){
-      this.usersView = new funding.Views.UsersView({
+      this.userView = new funding.Views.UserView({
         collection: this.model.get('users'),
       });
       
@@ -29,7 +29,6 @@ funding.Views = funding.Views || {};
 
       return this.$el.html([
         rendered,
-        this.usersView.$el,
         this.needsView.$el,
       ]);
     },

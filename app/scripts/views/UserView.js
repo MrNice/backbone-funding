@@ -5,7 +5,7 @@ funding.Views = funding.Views || {};
 (function () {
   'use strict';
 
-  funding.Views.UsersView = Backbone.View.extend({
+  funding.Views.UserView = Backbone.View.extend({
 
     tagName: 'div',
 

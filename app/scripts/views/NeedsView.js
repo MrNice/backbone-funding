@@ -8,7 +8,7 @@ funding.Views = funding.Views || {};
   funding.Views.NeedsView = Backbone.View.extend({
     tagName: 'div',
 
-    className: 'needs col-sm-6 col-xs-12',
+    className: 'needs col-xs-12',
 
     template: JST['app/scripts/templates/NeedsView.ejs'],
 
