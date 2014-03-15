@@ -1,5 +1,9 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
+.face {
+    width: 200px;
+    height: auto;
+}
 @import 'sass-bootstrap/lib/bootstrap';
 
 .browsehappy {

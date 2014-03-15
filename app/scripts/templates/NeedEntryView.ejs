@@ -1,4 +1,7 @@
 <h4><%= title %> - by <%= owner.get('name') %></h4>
+<div class="face">
+  <img src="<%= owner.get('image') %>" class="img-responsive"/>
+</div>
 <p>More info: <%= description %></p>
 <p>I need: <%= amountNeeded %></p>
 <!-- TODO: turn amtRec'd to a % funded d3 bar -->
