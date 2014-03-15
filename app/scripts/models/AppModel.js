@@ -5,7 +5,7 @@ funding.Models = funding.Models || {};
 (function () {
     'use strict';
 
-    funding.Models.AppmodelModel = Backbone.Model.extend({
+    funding.Models.AppModel = Backbone.Model.extend({
 
         url: '',
 

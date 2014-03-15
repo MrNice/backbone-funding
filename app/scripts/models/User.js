@@ -7,7 +7,7 @@ funding.Models = funding.Models || {};
 
   funding.Models.UserModel = Backbone.Model.extend({
     initialize: function() {
-      this.set('helped', new funding.collections.HelpedCollection());
+      this.set('helped', new funding.Collections.HelpedCollection());
     },
 
     defaults: {
