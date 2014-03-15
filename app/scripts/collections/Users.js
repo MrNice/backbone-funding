@@ -9,8 +9,16 @@ funding.Collections = funding.Collections || {};
 
     model: funding.Models.UserModel,
 
+    initialize: function() {
+      // this.on('newNeed', function(need) { 
+      //   this.trigger('newNeed', need); 
+      // }, this);
+    },
+
     events: {
-      'newNeed': function(need) { console.log(need); },
+      // 'newNeed': function(need) {
+      //   console.log(need);
+      // },
     },
   });
 

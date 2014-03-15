@@ -11,6 +11,15 @@ funding.Models = funding.Models || {};
 
     initialize: function() {
       // Add all of the needs stored under users 
+      this.get('needs').listenTo(this.get('users'), 'newNeed', function(need) {
+        this.add(need);
+        console.log('Need added: ' + need.get('title') );
+      });
+
+      // this.get('needs').listenTo(this.get('users'), 'newNeed', function() {
+      //   console.log('The queue heard the player end event');
+      // });
+
       _(this.get('users').models).each(function(user) {
         if(user.get('need') !== undefined) {
           user.spawnNeed();
@@ -20,13 +29,6 @@ funding.Models = funding.Models || {};
 
     defaults: {
     },
-
-    validate: function(attrs, options) {
-    },
-
-    parse: function(response, options)  {
-      return response;
-    }
   });
 
 })();

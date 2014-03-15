@@ -8,7 +8,6 @@ funding.Models = funding.Models || {};
   funding.Models.UserModel = Backbone.Model.extend({
     initialize: function() {
       this.set('helped', new funding.Collections.HelpedCollection());
-      // Hacky way to get around the preloading
     },
 
     defaults: {
@@ -17,8 +16,8 @@ funding.Models = funding.Models || {};
 
     spawnNeed: function(){
       if(this.get('need')['added'] === false){
+        this.get('need')['added'] = true;
         console.log(this.get('need'));
-        this.set('added', true);
         this.trigger('newNeed', new funding.Models.NeedModel(this.get('need')));
       }
     },
