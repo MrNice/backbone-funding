@@ -3,7 +3,6 @@ var userData = [
   {
     name: "John Smith",
     about: "I make horseshoes for the Budweiser horses",
-    image: "",
     funded: {
       '0': { name: 'Will Smith', amount: 1000 },
     },
@@ -33,7 +32,7 @@ var userData = [
   },
   {
     name: "John Doe",
-    about: "",
+    about: "I'm so lost right now",
     image: "http://img2.wikia.nocookie.net/__cb20131107142709/creepypasta/images/3/39/Head_Silhouette.jpg",
     // amountFunded: 13345,
     funded: {
@@ -58,7 +57,6 @@ var userData = [
   {
     name: "Jhonny 'Boy' Smith",
     about: "I'm just a hankerin for a better tractor",
-    image: "",
     // amountFunded: 10,
     funded: {
       '0': { name: "Jhonny 'Boy' Smith", amount: 10 },
@@ -73,7 +71,6 @@ var userData = [
   {
     name: "Jonathon Smith",
     about: "I have a boring name",
-    image: "",
     // amountFunded: 12,
     funded: {
       '0': { name: "Jhonny 'Boy' Smith", amount: 12 },

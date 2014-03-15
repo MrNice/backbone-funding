@@ -7,6 +7,8 @@ funding.Views = funding.Views || {};
 
   funding.Views.NeedEntryView = Backbone.View.extend({
 
+    className: "item need col-sm-10 col-sm-offset-1",
+
     template: JST['app/scripts/templates/NeedEntryView.ejs'],
 
     initialize: function(){

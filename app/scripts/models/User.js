@@ -11,7 +11,7 @@ funding.Models = funding.Models || {};
     },
 
     defaults: {
-      image: "http://art-tech.arts.ufl.edu/gal/d/11226-1/head-silhouette.png",
+      "image": "http://art-tech.arts.ufl.edu/gal/d/11226-1/head-silhouette.png",
     },
 
     spawnNeed: function(){

@@ -8,7 +8,7 @@ funding.Views = funding.Views || {};
   funding.Views.UserEntryView = Backbone.View.extend({
     tagName: 'div',
 
-    className: 'user',
+    className: "item user col-sm-10 col-sm-offset-1",
 
     template: JST['app/scripts/templates/UserEntry.ejs'],
 

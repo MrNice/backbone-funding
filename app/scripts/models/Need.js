@@ -11,8 +11,8 @@ funding.Models = funding.Models || {};
     },
 
     defaults: {
-      amountNeeded: 100,
-      amountReceived: 0,
+      "amountNeeded": 100,
+      "amountReceived": 0,
     },
 
     receiveDonation: function(amount, donor) {
