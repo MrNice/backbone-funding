@@ -20,7 +20,16 @@ funding.Views = funding.Views || {};
         collection: this.model.get('needs'),
       });
       this.render();
+    },
 
+    events: {
+      'click .newNeed': function() {
+        console.log('New Need Clicked');
+      },
+
+      'click .newUser': function() {
+        console.log('New User Clicked');
+      },
     },
 
     render: function(){
